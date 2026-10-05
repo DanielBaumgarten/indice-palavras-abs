@@ -39,3 +39,21 @@ def _buscar(self, no, palavra):
         return self._buscar(no.esquerda, palavra)
 
     return self._buscar(no.direita, palavra)
+    
+def listar_ordenado(self):
+    self._inorder(self.raiz)
+
+
+def _inorder(self, no):
+
+    if no is not None:
+
+        self._inorder(no.esquerda)
+
+        print(
+            no.palavra,
+            "-",
+            no.quantidade
+        )
+
+        self._inorder(no.direita)
