@@ -22,3 +22,20 @@ def _inserir(self, no, palavra):
         no.quantidade += 1
 
     return no
+
+def buscar(self, palavra):
+    return self._buscar(self.raiz, palavra)
+
+
+def _buscar(self, no, palavra):
+
+    if no is None:
+        return None
+
+    if palavra == no.palavra:
+        return no
+
+    if palavra < no.palavra:
+        return self._buscar(no.esquerda, palavra)
+
+    return self._buscar(no.direita, palavra)
